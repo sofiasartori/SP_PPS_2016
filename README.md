@@ -2,3 +2,4 @@
 Segundo parcial
 Sofía Sartori
 BrianOjeda
+jonathan vasquez serrudo
