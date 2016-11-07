@@ -1,1 +1,20 @@
-/* Empty. Add your own CSS if you like */
+.tabs .tab-item .icon.accidente {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/accidente.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.animales {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/animales.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.avatarRojo {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url('../img/personarojo.png');
+  background-size:contain;
+}

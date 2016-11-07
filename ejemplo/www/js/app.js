@@ -40,46 +40,46 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.login', {
+    url: '/login',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-login': {
+        templateUrl: 'templates/tab-login.html',
+        controller: 'LoginCtrl'
       }
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.accidentes', {
+      url: '/accidentes',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-accidentes': {
+          templateUrl: 'templates/tab-accidentes.html',
+          controller: 'AccidentesCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.accidentes-reporte', {
+      url: '/accidentes/:accidentes-reporte',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-accidentes': {
+          templateUrl: 'templates/accidentes-reporte.html',
+          controller: 'AccidentesReporteCtrl'
         }
       }
     })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.animalesSueltos', {
+    url: '/animalesSueltos',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-animalesSueltos': {
+        templateUrl: 'templates/tab-animalesSueltos.html',
+        controller: 'AnimalesSueltosCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });
