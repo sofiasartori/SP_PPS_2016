@@ -1,0 +1,6 @@
+.controller('AnimalesSueltosCtrl', function($scope) {
+
+  
+})
+
+
