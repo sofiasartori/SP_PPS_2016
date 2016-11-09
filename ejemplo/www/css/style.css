@@ -18,3 +18,15 @@
   background-image: url('../img/personarojo.png');
   background-size:contain;
 }
+.userRojo{
+  content: url('../img/User-red.png');
+}
+
+.sosPng{
+  content: url('../img/sos.png');
+  width:250px;
+}
+
+.letraRoja{
+  color: #bf2d26;
+}
