@@ -51,6 +51,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
+  .state('tab.crearusuario', {
+    url: '/crearusuario',
+    views: {
+      'tab-crearusuario': {
+        templateUrl: 'templates/crearusuario.html',
+        controller: 'CrearUsuarioCtrl'
+      }
+    }
+  })
+
   .state('tab.accidentes', {
       url: '/accidentes',
       views: {
