@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('LoginCtrl', function($scope, User)
+.controller('LoginCtrl', function($scope, User, $state)
 {
 	console.log("estoy en login");
 	 
@@ -11,7 +11,7 @@ angular.module('starter')
 	$scope.registrarse=function()
 	{
 		console.log("estoy en registearse");
-		 window.location.href= "#/tab/crearusuario";
+		 $state.go("tab.crearusuario");
 	};
 	
 
