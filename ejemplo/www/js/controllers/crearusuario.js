@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter')
 
 .controller('CrearUsuarioCtrl', function($scope, User)
 {

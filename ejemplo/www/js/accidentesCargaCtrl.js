@@ -1,8 +1,8 @@
-angular.module('starter', [])
+angular.module('starter')
 
 .controller('AccidentesReporteCtrl', function($scope,User) {
 
-  var ref = new Firebase("https://votaciones-f2766.firebaseio.com/");
+  var ref = new Firebase("https://autopistas-cad17.firebaseio.com/user");
   var user = User.TraerDatosUsuario();
   $scope.accidente={};
   $scope.accidente.nombre;

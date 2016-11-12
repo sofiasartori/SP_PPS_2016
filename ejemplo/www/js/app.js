@@ -54,7 +54,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.crearusuario', {
     url: '/crearusuario',
     views: {
-      'tab-crearusuario': {
+      'tab-login': {
         templateUrl: 'templates/crearusuario.html',
         controller: 'CrearUsuarioCtrl'
       }
@@ -70,10 +70,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.accidentes.reporte', {
-      url: '/accidentes/:accidentes.reporte',
+    .state('tab.accidentesReporte', {
+      url: '/tab.accidentesReporte',
       views: {
-        'tab-accidentes.reporte': {
+        'tab-accidentes': {
           templateUrl: 'templates/accidentes-reporte.html',
           controller: 'AccidentesReporteCtrl'
         }
