@@ -70,10 +70,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.accidentes-reporte', {
-      url: '/accidentes/:accidentes-reporte',
+    .state('tab.accidentes.reporte', {
+      url: '/accidentes/:accidentes.reporte',
       views: {
-        'tab-accidentes': {
+        'tab-accidentes.reporte': {
           templateUrl: 'templates/accidentes-reporte.html',
           controller: 'AccidentesReporteCtrl'
         }
@@ -91,6 +91,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/accidentes');
+  $urlRouterProvider.otherwise('/tab/login');
 
 });
