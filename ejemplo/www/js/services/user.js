@@ -1,11 +1,12 @@
 angular.module('starter.services', [])
-.service('User', function ($timeout){
+.service('User', function (FactoryUser){
 
    
    
 	 this.CrearUsuario = CrearUsuario;
    this.Login=Login;
    this.TraerDatosUsuario=TraerDatosUsuario;
+   this.CrearObjetofireBase=CrearObjetofireBase;
 
     	function CrearUsuario(email,contrasena,nombre,apellido,telefono)
     	{
@@ -37,7 +38,7 @@ angular.module('starter.services', [])
 
         function CrearPerfil(email,nombre,apellido,telefono)
         {
-            var messagesRef = new Firebase('https://autopistas-cad17.firebaseio.com/user');
+            var messagesRef = new Firebase(FactoryUser.firebase);
 
              messagesRef.push({email:email, nombre:nombre,apellido:apellido,telefono:telefono,tipo:"User"});
              alert("Usuario creado");
@@ -70,36 +71,16 @@ angular.module('starter.services', [])
         
                 });
         }
+          function CrearObjetofireBase()
+        {
+             var obj = new Firebase(FactoryUser.firebase);
+             return obj;
+        }
         function TraerDatosUsuario()
         {
-            console.log("Estoy en traerdatosusuario");
-            var messagesRef = new Firebase('https://autopistas-cad17.firebaseio.com/user')
             var user = firebase.auth().currentUser;
-            var email;
-            var retornousuario=new Object();
-            email = user.email;
-             $timeout(function() {
-                 messagesRef.on('child_added', function (snapshot) {
-                  //GET DATA
-                   var data = snapshot.val();
-                  if (user != null) {
-                 
-                        if(data.email==email)
-                        {
-                          retornousuario.email=data.email;
-                          retornousuario.nombre=data.nombre;
-                          retornousuario.apellido=data.apellido;
-                          retornousuario.apellido=data.telefono;
-                          console.log("Estoy dentro del if");
-                        }
-                    }
-                });
-           }, 3000);   
-         
-            return retornousuario; 
-       
-    // Loadind done here - Show message for 3 more seconds.
-          
+            console.log("Estoy en traer datos usuario: "+user);
+            return user;
         }
 
 
