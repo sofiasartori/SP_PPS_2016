@@ -1,26 +1,44 @@
 angular.module('starter')
 
-.controller('AccidentesReporteCtrl', function($scope,User) {
-
-  var ref = new Firebase("https://autopistas-cad17.firebaseio.com/user");
-  var user = User.TraerDatosUsuario();
+.controller('AccidentesReporteCtrl', function($scope,$cordovaGeolocation,$ionicPopup,$state) {
+  var user = firebase.auth().currentUser;
+  var options = {timeout: 10000, enableHighAccuracy: true};
+  var ref = new Firebase("https://autopistas-cad17.firebaseio.com/accidentes");
   $scope.accidente={};
-  $scope.accidente.nombre;
-  $scope.accidente.direccion;
-  $scope.accidente.tipo;
-  $scope.accidente.telefono;
+  $scope.accidente.mail=user.email;
+  $scope.accidente.longitud;
+  $scope.accidente.latitud;
+  $scope.accidente.tipo="Accidente";
+
+  $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+    $scope.accidente.longitud=position.coords.latitude; 
+    $scope.accidente.latitud=position.coords.longitude;
+  }, function(error){
+      console.log("Could not get location");
+  });
+    
 
   
   $scope.CargarAccidente = function(){
-  	 ref.push({
-      nombre: $scope.nombre,
-      direccion: $scope.direccion,
-      tipo: $scope.tipo,
-      tel: $scope.telefono
+  ref.push({
+      email:$scope.accidente.mail,
+      tipo: $scope.accidente.tipo,
+      ubicacion:{
+                  longitud: $scope.accidente.longitud,
+                  latitud: $scope.accidente.latitud
+                }      
     });
-  }
 
-   
+  var alertPopup = $ionicPopup.alert({
+     title: 'Notificacion!',
+     template: 'Gracias se cargo correctamente.'
+   });
+    alertPopup.then(function(res) {
+     history.back();
+   });
+
+  }
+  
 });
 
 

@@ -70,15 +70,25 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         }
       }
     })
-    .state('tab.accidentesReporte', {
-      url: '/tab.accidentesReporte',
-      views: {
-        'tab-accidentes': {
-          templateUrl: 'templates/accidentes-reporte.html',
-          controller: 'AccidentesReporteCtrl'
-        }
+  .state('tab.accidentesReporte', {
+    url: '/tab.accidentesReporte',
+    views: {
+      'tab-accidentes': {
+        templateUrl: 'templates/accidentes-reporte.html',
+        controller: 'AccidentesReporteCtrl'
       }
-    })
+    }
+  })
+
+  .state('tab.calificarServicio', {
+    url: '/tab.calificarServicio',
+    views: {
+      'tab-accidentes': {
+        templateUrl: 'templates/calificarServicio.html',
+        controller: 'AccidentesCalificarCtrl'
+      }
+    }
+  })
 
   .state('tab.animalesSueltos', {
     url: '/animalesSueltos',

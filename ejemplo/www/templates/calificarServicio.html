@@ -1,0 +1,22 @@
+<ion-view view-title="Calificar Servicio">
+  <ion-content class="centrar">
+   <button ng-click="MeGusta()" class="button button-block button-balanced">
+    Me Gusta
+   </button>
+   <button ng-click="NoMeGusta()" class="button button-block button-assertive">
+    No Me Gusta
+   </button>
+   <div class="list">
+
+  <div class="list list-inset">
+    <label class="item item-input">
+      <input ng-model="accidente.comentario" type="text" placeholder="Deja un comentario">
+    </label>
+    <button ng-click="Comentar()" class="button button-block button-dark">
+      Enviar Comentario
+    </button>
+  </div>
+
+
+</ion-content>
+</ion-view>

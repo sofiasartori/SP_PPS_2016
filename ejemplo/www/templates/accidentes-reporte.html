@@ -1,27 +1,16 @@
 <ion-view view-title="Realizar Reclamo">
   <ion-content class="centrar">
     <div class="list">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Nombre</span>
-        <input ng-model="accidente.nombre" type="text" placeholder="John">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Direccion del accidente</span>
-        <input ng-model="accidente.direccion" type="text" placeholder="lavalle">
-      </label>
       <label class="item item-input item-select">
         <div class="input-label">
           Tipo de Accidente
         </div>
         <select ng-model="accidente.tipo">
-          <option>Accidente</option>
-          <option selected>Averia de Vehiculo</option>
+          <option selected >Accidente</option>
+          <option>Averia de Vehiculo</option>
         </select>
       </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Telefono Celular</span>
-        <input ng-model="accidente.telefono" type="text" placeholder="(011) 15-2222-1111">
-      </label>
+
     </div>
   <button ng-click="CargarAccidente()" class="button button-full button-outline button-assertive">
    Reportar Accidente</button><br>

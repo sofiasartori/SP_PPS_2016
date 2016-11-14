@@ -5,6 +5,11 @@ angular.module('starter')
     console.log("entro");
     $state.go("tab.accidentesReporte");
   }   
+
+  $scope.IrCalificar = function(){
+    console.log("entro Calificar");
+    $state.go("tab.calificarServicio");
+  }  
 })
 
 
