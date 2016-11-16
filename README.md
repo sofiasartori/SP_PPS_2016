@@ -1,29 +1,53 @@
-# SP_PPS_2016
+## SP_PPS_2016
 
-LOS ULTIMOS
+###LOS ULTIMOS :wink:
 
 App ID: 2b129210
-web: https://autopistas-cad17.firebaseapp.com
+Nuestro sitio web [Firebase] (https://autopistas-cad17.firebaseapp.com)
+Nuestro sitio web [GitHub] (https://autopistas-cad17.firebaseapp.com)
+
+*Segundo parcial*
+*Sofía Sartori
+*BrianOjeda
+*jonathan vasquez serrudo
+
+##Semana del 8/11 :open_mouth:
+
+#Responsabilidades
+
+*Sofia Sartori: subir todo a git hub, realizar mapeo, instalar plugins, realizar css, controller y html de animales sueltos
+*Brian Ojeda: Realizar controller y html del login
+*Jonathan Vasquez: realizar controller y html de accidentes
+
+#Logros :smiley:
+
+- [x] Sofía Sartori: subir el proyecto, pagina de animales sueltos con mapa y llamadas a telefono
+- [x] Brian Ojeda: hecho login y registro de usuario y subida a base de datos
+- [x] Jonathan Vasquez: pagina de accidentes y datos de carga de los mismos
 
 
-Segundo parcial
-Sofía Sartori
-BrianOjeda
-jonathan vasquez serrudo
+#Faltantes :weary:
 
-Semana del 8/11
-Responsabilidades
+*Sofía Sartori: push notifications
+*Brian Ojeda: -
+*Jonathan Vasquez: falta guardar en firebase los datos
 
-Sofia Sartori: subir todo a git hub, realizar mapeo, instalar plugins, realizar css, controller y html de animales sueltos
-Brian Ojeda: Realizar controller y html del login
-Jonathan Vasquez: realizar controller y html de accidentes
+##Semana del 14/11 :dizzy-face:
 
-Logros
-Sofía Sartori: subir el proyecto, pagina de animales sueltos con mapa y llamadas a telefono
-Brian Ojeda: hecho login y registro de usuario y subida a base de datos
-Jonathan Vasquez: pagina de accidentes 
+#Responsabilidades
 
-Faltantes
-Sofía Sartori: push notifications
-Brian Ojeda: -
-Jonathan Vasquez: falta guardar en firebase los datos
+*Sofia Sartori: subir todo a git hub, push notifications, graficos de animales, realizar css, formato readme, sitio github
+*Brian Ojeda: Realizar grafico para administrador de accidentes
+*Jonathan Vasquez: realizar sistema de puntuacion de servicio, tipos de accidentes, mapa, SOS
+
+#Logros
+
+*Sofía Sartori: 
+*Brian Ojeda: 
+*Jonathan Vasquez: 
+
+#Faltantes
+
+*Sofía Sartori: 
+*Brian Ojeda: 
+*Jonathan Vasquez: 
