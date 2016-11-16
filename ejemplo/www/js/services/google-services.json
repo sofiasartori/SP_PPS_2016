@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "279922254509",
+    "firebase_url": "https://autopistas-cad17.firebaseio.com",
+    "project_id": "autopistas-cad17",
+    "storage_bucket": "autopistas-cad17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279922254509:android:e20fad920b0571d8",
+        "android_client_info": {
+          "package_name": "com.ionicframework.ejemplo193114"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279922254509-5n9r1k1jdrhk7jjf85qi0caomfsm3on4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDwA15JkJaYg6exhIrc7fp7qzSgrWM_rM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
