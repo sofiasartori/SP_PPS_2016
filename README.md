@@ -6,7 +6,7 @@ App ID: 2b129210
 
 Nuestro sitio web [Firebase] (https://autopistas-cad17.firebaseapp.com)
 
-Nuestro sitio web [GitHub] (https://autopistas-cad17.firebaseapp.com)
+Nuestro sitio web [GitHub] (https://sofiasartori.github.io/SP_PPS_2016)
 
 ###*Segundo parcial*
 
