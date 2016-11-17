@@ -47,11 +47,18 @@
 .vaca{
   content: url('../img/vaca.png');
   height: 40px;
-  width: 40px:;
+  width: 40px;
 }
 
 .caballo{
   content: url('../img/caballo.png');
   height: 40px;
-  width: 40px:;
+  width: 40px
+}
+
+.botonAnimal{
+  content: url('../img/boton.png');
+  width:300px;
+  margin-top: 25%;
+  margin-left: 10%;
 }

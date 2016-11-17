@@ -1,7 +1,13 @@
 angular.module('starter.controllers', [])
 
-.controller('AnimalesSueltosCtrl', function($scope, $state, $cordovaGeolocation) {
+.controller('AnimalesSueltosCtrl', function($scope, $state, $cordovaGeolocation, $ionicPopup) {
 	var options = {timeout: 10000, enableHighAccuracy: true};
+  var user = firebase.auth().currentUser;
+  var base = new Firebase("https://autopistas-cad17.firebaseio.com/animales");
+  $scope.animal = {};
+  $scope.animal.longitud;
+  $scope.animal.latitud;
+
  	$scope.setMostrarVaca= function() {
 		document.getElementById("animalSuelto2").style.display = "none";
 		document.getElementById("animalSuelto").style.display = "";
@@ -10,6 +16,26 @@ angular.module('starter.controllers', [])
 		document.getElementById("animalSuelto").style.display = "none";
 		document.getElementById("animalSuelto2").style.display = "";
 	}
+  $scope.reportar = function(){
+      $cordovaGeolocation.getCurrentPosition(options).then(function(position){
+        $scope.animal.longitud=position.coords.latitude; 
+        $scope.animal.latitud=position.coords.longitude;
+        }, function(error){
+          console.log("No se pudo obtener locacion");
+        });
+      base.push({
+        ubicacion:{
+          longitud: $scope.animal.longitud,
+          latitud: $scope.animal.latitud
+        }      
+      });
+      var alerta = $ionicPopup.alert({
+        title: 'Animal reportado!',
+        template: 'Animal reportado con exito.'
+      });
+      alerta.then(function(res) {      
+      });
+  }
 
   	$cordovaGeolocation.getCurrentPosition(options).then(function(position){
  
@@ -58,8 +84,7 @@ angular.module('starter.controllers', [])
  
   	}, function(error){
     	console.log("Could not get location");
-  	});
-  	
+  	});  	
   	
 });
 
