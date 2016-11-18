@@ -2,15 +2,13 @@
   <ion-content class="centrar">
 
 	<button ng-click="irReporte()" class="button  button-full button-outline button-assertive">
-    Relizar Reclamo</button><br>
-	<button href="#/tab/accidentes" class="button button-full button-outline button-calm">
+    Realizar Reclamo</button><br>
+	<button ui-sref="tab.mapsAccidentes" class="button button-full button-outline button-calm">
 	Ver Reclamo</button><br>
 	<button ng-click="IrCalificar()" class="button button-full button-outline button-balanced">
 	 Calificar Servicio</button><br>
-	<button class="button button-full button-outline button-energized">
-	 Solicitar Ayuda</button><br>
 
-
-	    
-  </ion-content>
+	 <a ng-click="CargarLlamada()" class="button button-full button-outline button-energized" href="tel:911">Solicitar Ayuda Llmar al 911
+   
+</ion-content>
 </ion-view>
