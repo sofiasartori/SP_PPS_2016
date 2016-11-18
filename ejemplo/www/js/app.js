@@ -20,7 +20,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-  });
+
+    var push = new Ionic.Push({
+      "onNotification": function(notification){
+        alert('Received notification!');
+      },
+      "pluginConfig": {
+        "android": {
+          "iconColor": "blue"
+         }
+      }
+    });
+
+      var user = Ionic.User.current();
+
+      user.set('name', 'Sofia');
+      user.set('bio', 'hola');
+      user.save();
+
+      var callback = function(){
+        push.addTokenToUser(user);
+        user.save();
+      };
+
+      push.register(callback);
+    });
+  
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
