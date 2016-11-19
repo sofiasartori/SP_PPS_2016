@@ -8,18 +8,20 @@ angular.module('starter')
   $scope.accidente.meGusta=0;
   $scope.accidente.noMeGusta=0;
   $scope.accidente.comentario="";
-  $scope.meGusta;
-  $scope.noMeGusta;
-  $scope.comentario;
+  $scope.meGusta=0;
+  $scope.noMeGusta=0;
+  $scope.comentario='';
 
 
- var refCali = new Firebase("https://autopistas-cad17.firebaseio.com/calificaciones/"+ user.i);
+ var refCali = new Firebase("https://autopistas-cad17.firebaseio.com/calificaciones/"+ user.uid);
 
-  var starCountRef = firebase.database().ref('calificaciones/'+ user.i);
+  var starCountRef = firebase.database().ref('calificaciones/'+ user.uid);
   starCountRef.on('value', function(snapshot) {
+    if(snapshot.val()!=null){
     $scope.meGusta=snapshot.val().meGusta;
     $scope.noMeGusta=snapshot.val().noMeGusta;
     $scope.comentario=snapshot.val().comentario;
+    }
   });
 
   var starCountRef = firebase.database().ref('calificaciones/');
