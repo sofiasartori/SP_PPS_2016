@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('AnimalesSueltosCtrl', function($scope, $state, $cordovaGeolocation, $ionicPopup, $cordovaVibration, $cordovaNativeAudio) {
+.controller('AnimalesSueltosCtrl', function($scope, $state, $cordovaGeolocation, $ionicPopup, $cordovaVibration, $cordovaNativeAudio){
+  $scope.$on('cloud:push:notification', function(event, data) {
+    var msg = data.message;
+    alert(msg.title + ': ' + msg.text);
+    $state.go("tab.mapaAnimales");
+  });
   try{
     $cordovaNativeAudio.preloadSimple('corr', 'sounds/correct.mp3');
     }
