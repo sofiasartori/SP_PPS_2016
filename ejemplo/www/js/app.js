@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'starter.services', 'ngCordova', 'chart.js'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $ionicPush) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,6 +22,12 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
     }
   
   })
+  $ionicPush.register().then(function(t) {
+    return $ionicPush.saveToken(t);
+  }).then(function(t) {
+    console.log('Token saved:', t.token);
+  });
+  
 })
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $ionicCloudProvider) {
@@ -40,7 +46,7 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
           }
         }
   });
-
+  
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
@@ -121,6 +127,24 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
       'tab-animalesSueltos': {
         templateUrl: 'templates/tab-animalesSueltos.html',
         controller: 'AnimalesSueltosCtrl'
+      }
+    }
+  })
+  .state('tab.mapaAnimales', {
+    url: '/tab.mapaAnimales',
+    views: {
+      'tab-animalesSueltos': {
+        templateUrl: 'templates/mapaAnimales.html',
+        controller: 'MapaAnimalesCtrl'
+      }
+    }
+  })
+  .state('tab.analiticasAnimales', {
+    url: '/tab.analiticasAnimales',
+    views: {
+      'tab-animalesSueltos': {
+        templateUrl: 'templates/analiticasAnimales.html',
+        controller: 'AnaliticasAnimalesCtrl'
       }
     }
   });

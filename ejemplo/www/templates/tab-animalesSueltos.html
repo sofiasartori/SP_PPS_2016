@@ -1,23 +1,9 @@
 <html ng-app="miModulo">
 <ion-view view-title="Animales Sueltos">
   <ion-content>
-  	<div id="map" data-tap-disabled="true"></div>
-  	<div class="list" style="display:none;" id="animalSuelto">
-  		<a class="item item-thumbnail-left" style="padding-top:8%;" href="tel:080054541541">
-	  		<img class="vaca">
-	  		<h2>CUIDADO!!! Vaca suelta</h2>
-	  		<p>Llame al 0800-animales</p>
-  		</a>
-  	</div>
-  	<div class="list" style="display:none;" id="animalSuelto2">
-  		<a class="item item-thumbnail-left" style="padding-top:8%;" href="tel:080054541541">
-	  		<img class="caballo">
-	  		<h2>CUIDADO!!! Caballo suelto</h2>
-	  		<p>Llame al 0800-animales</p>
-  		</a>
-  	</div>
-    <!--<img class="botonAnimal animated pulse" ng-click="reportar()" id="botonAnimal">-->
-    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-series="series" chart-options="options" chart-dataset-override="datasetOverride" chart-click="onClick"></canvas> 
+  <img class="botonAnimal animated pulse" ng-click="reportar()" id="botonAnimal">
+  <button ng-click="irMapa()" class="button  button-full button-outline button-calm">Ver mapa de animales reportados</button>
+  <button ng-click="irGrafico()" class="button  button-full button-outline button-royal">Ver anal&iacute;ticas de animales reportados</button> 
   </ion-content>
 </ion-view>
 </html>
