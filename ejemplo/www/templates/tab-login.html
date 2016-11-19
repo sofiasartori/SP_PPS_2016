@@ -7,16 +7,17 @@
        <div class="list">
         <label class="item item-input item-stacked-label">
             <span class="input-label" >Email</span>
-            <input type="text" placeholder="john@suhr.com" id="email">
+            <input type="text" placeholder="john@suhr.com" ng-model="email" id="email">
           </label>
           <label class="item item-input item-stacked-label">
             <span class="input-label">Contrasena</span>
-            <input type="password" placeholder="****" id="contrasena">
+            <input type="password" placeholder="****" id="contrasena" ng-model="contrasena">
           </label>
 
     </div>
     <br>
-  
+    <button class="boton" ng-click="admin()">admin</button>
+    <button class="boton" ng-click="user()">user</button>
  
         <button class="boton" ng-click="login()">
      Aceptar

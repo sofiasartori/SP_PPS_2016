@@ -15,21 +15,6 @@ angular.module('starter')
   $scope.accidente.latitud;
   $scope.accidente.tipo="LLamada de emergencia";
 
-  if(user){
-     $scope.botones=true;
-    $scope.accidente.mail=user.email;
-     console.info(user);
-  }else{
-     $scope.botones=false;
-    var alertPopup = $ionicPopup.alert({
-     title: 'Notificacion!',
-     template: 'Debe estar logueado.'
-     });
-    alertPopup.then(function(res) {
-     history.back();
-   });
-  }
-
 
   var starCountRef = firebase.database().ref('accidentes/');
   starCountRef.on('value', function(snapshot) {
@@ -43,8 +28,10 @@ angular.module('starter')
 
 
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
-  $scope.accidente.longitud=position.coords.latitude; 
+
+  $scope.accidente.longitud=position.coords.latitude;   
   $scope.accidente.latitud=position.coords.longitude;
+  
   }, function(error){
       console.log("Could not get location");
   });
