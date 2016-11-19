@@ -1,5 +1,5 @@
 angular.module('starter.services', [])
-.service('User', function (FactoryUser){
+.service('User', function (FactoryUser, login){
 
    
    
@@ -47,9 +47,13 @@ angular.module('starter.services', [])
         function Login(email,contrasena)
         {
             firebase.auth().signInWithEmailAndPassword($("#email").val(),$("#contrasena").val()).then(function(result) {
-                
-                   
-                  window.location.href= "#/tab/accidentes";
+              var uno = login.getLogueado();
+              login.setLogueado(true);
+              var dos=login.getLogueado();
+                  /*if($("#email").val()=="admin@hotmail.com") 
+                    window.location.href= "#/tab/estadisticaCalificacion";
+                  else*/
+                    window.location.href="#/tab/accidentes"
 
                 }, function(error) {
                         

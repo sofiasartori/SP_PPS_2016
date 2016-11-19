@@ -1,4 +1,4 @@
-angular.module('starter.services', [])
+angular.module('starter.services')
 .service('Torta', function (){
 
     this.CrearGrafico=CrearGrafico;

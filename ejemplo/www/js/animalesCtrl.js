@@ -12,12 +12,10 @@ angular.module('starter.controllers', [])
   if(user.email == "admin@hotmail.com")
   {
       $scope.administrador=true;
-      $scope.$apply();
   }
   else
   {
       $scope.administrador=false;
-      $scope.$apply();
   }  
   var base = new Firebase("https://autopistas-cad17.firebaseio.com/animales");
   $scope.animal = {};

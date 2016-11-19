@@ -9,11 +9,11 @@ navigation history that also transitions its views in and out.
     <ion-nav-view name="tab-login"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="Accidentes" icon-off="accidente" icon-on="accidente" href="#/tab/accidentes" ng-if="!estaLogueado()">
+  <ion-tab title="Accidentes" icon-off="accidente" icon-on="accidente" href="#/tab/accidentes" disabled="!getLogueado()">
     <ion-nav-view name="tab-accidentes"></ion-nav-view>
   </ion-tab>
 
-  <ion-tab title="Animales sueltos" icon-off="animales" icon-on="animales" href="#/tab/animalesSueltos" ng-if="!estaLogueado()">
+  <ion-tab title="Animales sueltos" icon-off="animales" icon-on="animales" href="#/tab/animalesSueltos" disabled="!getLogueado()">
     <ion-nav-view name="tab-animalesSueltos"></ion-nav-view>
   </ion-tab>
 
