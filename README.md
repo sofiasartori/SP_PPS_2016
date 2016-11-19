@@ -6,7 +6,7 @@ App ID: 2b129210
 
 Nuestro sitio web [Firebase] (https://autopistas-cad17.firebaseapp.com)
 
-Nuestro sitio web [GitHub] (https://sofiasartori.github.io/SP_PPS_2016)
+Nuestro sitio web [GitHub] (https://sofiasartori.github.io)
 
 ###*Segundo parcial*
 
@@ -45,7 +45,7 @@ Nuestro sitio web [GitHub] (https://sofiasartori.github.io/SP_PPS_2016)
 
 ###Responsabilidades
 
--Sofia Sartori: subir todo a git hub, push notifications, graficos de animales, realizar css, formato readme, sitio 
+-Sofia Sartori: subir todo a git hub, push notifications, graficos de animales, ionic material, formato readme, sitio github, loading 
 
 -Brian Ojeda: Realizar grafico para administrador de accidentes
 
@@ -53,15 +53,15 @@ Nuestro sitio web [GitHub] (https://sofiasartori.github.io/SP_PPS_2016)
 
 ###Logros
 
-*Sofía Sartori: 
+*Sofía Sartori: push notifications, graficos de animales, formato readme, sitio github, loading
 
 *Brian Ojeda: 
 
-*Jonathan Vasquez: 
+*Jonathan Vasquez: realizar sistema de puntuacion de servicio, tipos de accidentes, SOS 
 
 ###Faltantes
 
--Sofía Sartori: 
+-Sofía Sartori: ionic material
 
 -Brian Ojeda: 
 
