@@ -11,7 +11,7 @@ angular.module('starter')
   $scope.meGusta=0;
   $scope.noMeGusta=0;
   $scope.comentario='';
-
+//controlador
 
  var refCali = new Firebase("https://autopistas-cad17.firebaseio.com/calificaciones/"+ user.uid);
 
