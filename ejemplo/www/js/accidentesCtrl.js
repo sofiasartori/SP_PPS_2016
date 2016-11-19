@@ -1,23 +1,50 @@
 angular.module('starter')
 
-.controller('AccidentesCtrl', function($scope, $state, $cordovaGeolocation ) {
+
+.controller('AccidentesCtrl', function($scope, $state,$timeout, $cordovaGeolocation,$ionicPopup, $cordovaProgress ) {
   var user = firebase.auth().currentUser;
   var options = {timeout: 10000, enableHighAccuracy: true};
   var ref = new Firebase("https://autopistas-cad17.firebaseio.com/");
+  
+
+
+  $scope.personas={};
+  $scope.visible=false;
   $scope.accidente={};
-  $scope.accidente.mail=user.email;
   $scope.accidente.longitud;
   $scope.accidente.latitud;
   $scope.accidente.tipo="LLamada de emergencia";
 
+  if(user){
+     $scope.botones=true;
+    $scope.accidente.mail=user.email;
+     console.info(user);
+  }else{
+     $scope.botones=false;
+    var alertPopup = $ionicPopup.alert({
+     title: 'Notificacion!',
+     template: 'Debe estar logueado.'
+     });
+    alertPopup.then(function(res) {
+     history.back();
+   });
+  }
+
+
   var starCountRef = firebase.database().ref('accidentes/');
   starCountRef.on('value', function(snapshot) {
-    console.info(snapshot.val());
+    $scope.personas=snapshot.val();
+    console.log($scope.personas);
+     $timeout(function(){
+               $scope.visible=true;
+      }, 3000);
   });
 
+
+
   $cordovaGeolocation.getCurrentPosition(options).then(function(position){
-    $scope.accidente.longitud=position.coords.latitude; 
-    $scope.accidente.latitud=position.coords.longitude;
+  $scope.accidente.longitud=position.coords.latitude; 
+  $scope.accidente.latitud=position.coords.longitude;
   }, function(error){
       console.log("Could not get location");
   });

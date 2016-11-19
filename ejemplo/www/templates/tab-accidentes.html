@@ -1,14 +1,14 @@
 <ion-view view-title="Accidentes">
   <ion-content class="centrar">
-
-	<button ng-click="irReporte()" class="button  button-full button-outline button-assertive">
+  	<h1 ng-if="!botones">Debe estar logueado</h1>
+	<button ng-if="botones" ng-click="irReporte()" class="button  button-full button-outline button-assertive">
     Realizar Reclamo</button><br>
-	<button ui-sref="tab.mapsAccidentes" class="button button-full button-outline button-calm">
+	<button ng-if="botones" ui-sref="tab.mapsAccidentes" class="button button-full button-outline button-calm">
 	Ver Reclamo</button><br>
-	<button ng-click="IrCalificar()" class="button button-full button-outline button-balanced">
+	<button ng-if="botones" ng-click="IrCalificar()" class="button button-full button-outline button-balanced">
 	 Calificar Servicio</button><br>
 
-	 <a ng-click="CargarLlamada()" class="button button-full button-outline button-energized" href="tel:911">Solicitar Ayuda Llmar al 911
+	 <a ng-if="botones" ng-click="CargarLlamada()" class="button button-full button-outline button-energized" href="tel:911">Solicitar Ayuda Llmar al 911
    
 </ion-content>
 </ion-view>

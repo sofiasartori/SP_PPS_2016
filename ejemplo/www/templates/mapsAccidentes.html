@@ -1,9 +1,16 @@
+
  <ion-view view-title="Accidentes">
-  <ion-content class="centrar">
-  <h1>asdasd</h1>
-  <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+ <ion-content class="centrar">
+ 
+ <ion-spinner ng-if="!visible" icon="bubbles" class="spinner-energized"></ion-spinner>
+ <ng-map ng-if="visible" default-style="true" center="-34.6777185,-58.3317764" zoom="3">
+
+      <marker ng-repeat="per in personas"
+ 		position="{{per.ubicacion.longitud}}, {{per.ubicacion.latitud}}" 
+ 		title="{{per.email}} {{per.tipo}}"></marker>
 
 
+    </ng-map>
 
 
 </ion-content>
