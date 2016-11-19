@@ -6,8 +6,19 @@ angular.module('starter.controllers', [])
     alert(msg.title + ': ' + msg.text);
     $state.go("tab.mapaAnimales");
   });
+  $scope.administrador=false;
   var options = {timeout: 10000, enableHighAccuracy: true};
   var user = firebase.auth().currentUser;
+  if(user.email == "admin@hotmail.com")
+  {
+      $scope.administrador=true;
+      $scope.$apply();
+  }
+  else
+  {
+      $scope.administrador=false;
+      $scope.$apply();
+  }  
   var base = new Firebase("https://autopistas-cad17.firebaseio.com/animales");
   $scope.animal = {};
   $scope.animal.longitud = '';
