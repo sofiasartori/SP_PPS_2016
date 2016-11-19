@@ -51,13 +51,13 @@ Nuestro sitio web [GitHub] (https://sofiasartori.github.io)
 
 -Jonathan Vasquez: realizar sistema de puntuacion de servicio, tipos de accidentes, mapa, SOS
 
-###Logros
+###Logros :tada:
 
 *Sofía Sartori: push notifications, graficos de animales, formato readme, sitio github, loading
 
-*Brian Ojeda: 
+*Brian Ojeda: usuario administrador
 
-*Jonathan Vasquez: realizar sistema de puntuacion de servicio, tipos de accidentes, SOS 
+*Jonathan Vasquez: realizar sistema de puntuacion de servicio, tipos de accidentes, SOS, mapas, spinner 
 
 ###Faltantes
 
@@ -65,4 +65,4 @@ Nuestro sitio web [GitHub] (https://sofiasartori.github.io)
 
 -Brian Ojeda: 
 
--Jonathan Vasquez: 
+-Jonathan Vasquez: -
