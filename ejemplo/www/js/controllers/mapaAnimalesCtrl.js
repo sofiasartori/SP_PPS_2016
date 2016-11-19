@@ -1,7 +1,11 @@
 angular.module('starter.controllers')
 
 .controller('MapaAnimalesCtrl', function($scope, $state, $cordovaGeolocation) {
-  console.log("hola3");
+  $("#map").hide();
+  setTimeout(function() {
+    $(".loader").hide();
+    $("#map").show();
+  }, 5000);
   var options = {timeout: 10000, enableHighAccuracy: true};
   var user = firebase.auth().currentUser;
   var base = new Firebase("https://autopistas-cad17.firebaseio.com/animales");
