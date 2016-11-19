@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngCordova', 'chart.js'])
+angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'starter.services', 'ngCordova', 'chart.js'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,36 +20,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    var push = new Ionic.Push({
-      "onNotification": function(notification){
-        alert('Received notification!');
-      },
-      "pluginConfig": {
-        "android": {
-          "iconColor": "blue"
-         }
-      }
-    });
-
-      var user = Ionic.User.current();
-
-      user.set('name', 'Sofia');
-      user.set('bio', 'hola');
-      user.save();
-
-      var callback = function(){
-        push.addTokenToUser(user);
-        user.save();
-      };
-
-      push.register(callback);
-    });
   
+  })
 })
 
-.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider, $ionicCloudProvider) {
   $ionicConfigProvider.tabs.position('bottom'); 
+
+  $ionicCloudProvider.init({
+        "core": {
+          "app_id": "2b129210"
+        },
+        "push": {
+          "sender_id": "279922254509",
+          "pluginConfig": {
+            "android": {
+              "iconColor": "#343434"
+            }   
+          }
+        }
+  });
 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
