@@ -56,6 +56,12 @@
   width: 40px
 }
 
+.octocat{
+  content: url('../img/octocat.svg');
+  height: 40px;
+  width: 40px
+}
+
 .botonAnimal{
   content: url('../img/boton.png');
   width:300px;
